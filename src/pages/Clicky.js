@@ -6,7 +6,7 @@ class Clicky extends React.Component {
     }
 
     render() {
-        return <div>AAAAAAAAAAAAAAAAAAAAA</div>
+        return <div>AAAAAAAAAAAAAAAAAAAAAbbbbbbbbbbbbbbbbbbbbbbbb</div>
     }
 }
 
