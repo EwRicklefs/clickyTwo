@@ -3,7 +3,10 @@ import GameInfo from "../components/GameInfo";
 import Game from "../components/Game";
 
 class Clicky extends React.Component {
-  state = {};
+  state = {
+      imageSrc: ["/assets/bp.png", "/assets/bw.png", "/assets/cap.png", "/assets/go1.png", "/assets/go2.png", "/assets/hu.png", "/assets/im.png", "/assets/sm.png", "/assets/th.png"]
+
+  };
 
   render() {
     return (
@@ -12,6 +15,9 @@ class Clicky extends React.Component {
           <h1>This is a header</h1>
         </div>
         <GameInfo />
+        <Game>
+            
+        </Game>
       </div>
     );
   }
