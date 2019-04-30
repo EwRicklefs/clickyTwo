@@ -1,11 +1,23 @@
 import React from "react";
-import GameInfo from "../components/GameInfo";
-import Game from "../components/Game";
+import {GameInfo, GameImages } from "../components/GameInfo";
+//import Game from "../components/Game";
+
+const urls = [
+    "/assets/bp.png",
+    "/assets/bw.png",
+    "/assets/cap.png",
+    "/assets/go1.png",
+    "/assets/go2.png",
+    "/assets/hu.png",
+    "/assets/im.png",
+    "/assets/sm.png",
+    "/assets/th.png"
+  ];
 
 class Clicky extends React.Component {
+    
   state = {
-      imageSrc: ["/assets/bp.png", "/assets/bw.png", "/assets/cap.png", "/assets/go1.png", "/assets/go2.png", "/assets/hu.png", "/assets/im.png", "/assets/sm.png", "/assets/th.png"]
-
+    mixedUp: urls
   };
 
   render() {
@@ -14,10 +26,14 @@ class Clicky extends React.Component {
         <div>
           <h1>This is a header</h1>
         </div>
-        <GameInfo />
-        <Game>
-            
-        </Game>
+        <GameInfo>
+          {this.state.mixedUp.map(function(img, x) {
+              return <GameImages
+                image={img}
+                key={x}
+              />
+          })}
+        </GameInfo>
       </div>
     );
   }

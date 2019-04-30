@@ -1,15 +1,17 @@
 import React from "react";
 
-function Jumbotron(props) {
+export function GameInfo( {children} ) {
   return (
-    <div
-      style={{ height: 120, clear: "both", textAlign: "center" }}
-      className="jumbotron"
-    >
-      {/* {children} */}
-      <h1>this is a body</h1>
-    </div> 
+    <div className="gameBody">
+      { children }
+    </div>
   );
 }
 
-export default Jumbotron;
+export function GameImages(image, key) {
+  return (
+    <img src={image.image} alt="nice try" id={key}/>
+  )
+}
+
+export default GameInfo;

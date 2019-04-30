@@ -1,14 +1,28 @@
-import React from "react";
+import React, { Component } from "react";
 
-function Jumbotron({ images }) {
-  return (
-    <div
-      style={{ height: 300, clear: "both", paddingTop: 50, textAlign: "center" }}
-      className="jumbotron"
-    >
-      { images }
-    </div> 
-  );
+class Game extends Component {
+    
+  renderImage(imageUrl) {
+    return (
+        <img src={imageUrl} alt="nice try" />
+    );
+  }
+  render() {
+    return (
+      <div
+        style={{
+          height: 300,
+          clear: "both",
+          paddingTop: 50,
+          textAlign: "center"
+        }}
+        className="jumbotron"
+      >
+       
+
+      </div>
+    );
+  }
 }
 
-export default Jumbotron;
+export default Game;
